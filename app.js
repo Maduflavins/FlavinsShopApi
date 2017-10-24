@@ -1,8 +1,12 @@
 var express = require('express'),
 app = express(),
 bodyParser = require('body-parser'),
-mongoose = require('mongoose');
+mongoose = require('mongoose'),
+products = require('./models/products'), 
+WishList = require('./models/wishlist');
 var db = mongoose.connect('mongodb://localhost/flavins-shop');
+
+
 
 
 
