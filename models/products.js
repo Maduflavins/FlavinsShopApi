@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 var product = new Schema({
     title: String,
     price: Number,
-    likes: Number
+    likes: {type: Number, default: 0}
 });
 
 
