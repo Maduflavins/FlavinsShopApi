@@ -26,6 +26,18 @@ app.post('/product', function(request, response){
             response.status(200).send(savedProduct);
         }
     })
+});
+
+app.get('/product', function(request, response){
+    products.find({}, function(err, products){
+        if(err){
+            response.status(500).send({error:"could not fetch products"});
+
+        }else{
+            response.status(200).send(products);
+        }
+
+    })
 })
 
 
